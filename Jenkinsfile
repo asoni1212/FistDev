@@ -7,12 +7,14 @@ stages {
             steps {
                 sh 'npm install --legacy-peer-deps'
                 sh 'npm install -g less'
+                sh 'npm install --save-dev ajv@^7'
                 sh 'npm run build'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'cp -r dist/* /var/www/platformown/qaclient/'
+               # sh 'cp -r build/* /var/www/platformown/qaclient/'
+              echo "success"
             }
         }
     }
