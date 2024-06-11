@@ -13,7 +13,6 @@ stages {
         }
         stage('Deploy') {
             steps {
-               # sh 'cp -r build/* /var/www/platformown/qaclient/'
               echo "success"
             }
         }
